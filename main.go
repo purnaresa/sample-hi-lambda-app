@@ -36,6 +36,10 @@ func main() {
 		lambda.Start(hello)
 
 	} else {
-		hello(nil, MyEvent{Name: "a"})
+		out, err := hello(nil, MyEvent{Name: "a"})
+		if err != nil {
+			log.Fatalln(err)
+		}
+		log.Infoln(out)
 	}
 }
