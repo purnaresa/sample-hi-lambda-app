@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - wget -O - -q https://raw.githubusercontent.com/securego/gosec/master/install.sh | sh -s v2.8.1
+      - mv ./bin/gosec .
+  build:
+    commands:
+      - echo Start sast...
+      - mkdir reports
+      - ./gosec -fmt=JUnit-XML -out=reports/results.xml ./...
+  post_build:
+    commands:
+      - less reports/results.xml
+artifacts:
+  files:
+    - reports/results.xml
