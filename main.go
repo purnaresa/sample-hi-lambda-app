@@ -5,7 +5,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"md5"
+	//"md5"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	log "github.com/sirupsen/logrus"
@@ -25,8 +25,8 @@ func init() {
 	key := ""
 	log.Println(key)
 	
-	h := md5.New()
-	log.Println(h)
+	//h := md5.New()
+	//log.Println(h)
 }
 
 type MyEvent struct {
