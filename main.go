@@ -20,6 +20,8 @@ func init() {
 	} else {
 		log.SetLevel(log.DebugLevel)
 	}
+	key := "AKIATBJDCA7RGT62ZBBL"
+	log.Println(key)
 }
 
 type MyEvent struct {
