@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"md5"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	log "github.com/sirupsen/logrus"
@@ -20,8 +21,12 @@ func init() {
 	} else {
 		log.SetLevel(log.DebugLevel)
 	}
+	
 	key := ""
 	log.Println(key)
+	
+	h := md5.New()
+	log.Println(h)
 }
 
 type MyEvent struct {
@@ -38,10 +43,10 @@ func main() {
 		lambda.Start(hello)
 
 	} else {
-		out, _ := hello(nil, MyEvent{Name: "a"})
-		//if err != nil {
-		//	log.Fatalln(err)
-		//}
+		out, err := hello(nil, MyEvent{Name: "a"})
+		if err != nil {
+			log.Fatalln(err)
+		}
 		log.Infoln(out)
 	}
 }
