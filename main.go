@@ -20,7 +20,7 @@ func init() {
 	} else {
 		log.SetLevel(log.DebugLevel)
 	}
-	key := "SIPwnWPZD2zF/OOYSgvBSLcqAR4wx3N/VywsxXIq"
+	key := ""
 	log.Println(key)
 }
 
