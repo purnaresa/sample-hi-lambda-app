@@ -6,4 +6,4 @@ phases:
         - echo Start deploy...
         - cd $CODEBUILD_SRC_DIR_BuildArtifact
         - zip file.zip sample-lambda
-        - aws lambda update-function-code --function-name sample-hi-lambda-app --zip-file fileb://file.zip
+        - aws lambda update-function-code --function-name sample-lambda --zip-file fileb://file.zip
