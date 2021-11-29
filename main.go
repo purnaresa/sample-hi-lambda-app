@@ -22,8 +22,8 @@ func init() {
 		log.SetLevel(log.DebugLevel)
 	}
 	
-
-	log.Println()
+	testKey:= "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+	log.Println(testKey)
 	
 }
 
