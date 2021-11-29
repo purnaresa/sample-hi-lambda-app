@@ -22,10 +22,9 @@ func init() {
 		log.SetLevel(log.DebugLevel)
 	}
 	
-	key := "4/YpFHP+eSeZit2VvsJ6k8nO12LQ9IRT118q0o7g"
+	key := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 	log.Println(key)
 	
-
 }
 
 type MyEvent struct {
