@@ -22,9 +22,7 @@ func init() {
 		log.SetLevel(log.DebugLevel)
 	}
 	
-	keyExample := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-	log.Println(keyExample)
-	log.Println()
+
 	log.Println()
 	
 }
