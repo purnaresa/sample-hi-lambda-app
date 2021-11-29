@@ -33,7 +33,7 @@ type MyEvent struct {
 }
 
 func hello(ctx context.Context, name MyEvent) (string, error) {
-	return fmt.Sprintf("Hello Cool Amazonian %s!", name.Name), nil
+	return fmt.Sprintf("Hello Cool Engineer %s!", name.Name), nil
 }
 
 func main() {
