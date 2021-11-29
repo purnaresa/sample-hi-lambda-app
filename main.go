@@ -5,7 +5,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-    "crypto/md5"
+
     
 
 	"github.com/aws/aws-lambda-go/lambda"
@@ -24,8 +24,7 @@ func init() {
 		log.SetLevel(log.DebugLevel)
 	}
 	
-    data := []byte("hello")
-    fmt.Printf("%x", md5.Sum(data))
+
 	log.Println()
 	
 }
