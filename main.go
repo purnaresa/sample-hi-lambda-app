@@ -24,6 +24,7 @@ func init() {
 	
 	keyExample := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 	log.Println(keyExample)
+	log.Println()
 	
 }
 
