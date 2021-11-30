@@ -10,7 +10,8 @@ import (
 
 	"github.com/aws/aws-lambda-go/lambda"
 	log "github.com/sirupsen/logrus"
-	
+	    "crypto/md5"
+    "fmt"
 )
 
 var isLambda bool
@@ -23,9 +24,9 @@ func init() {
 	} else {
 		log.SetLevel(log.DebugLevel)
 	}
-	key:= "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-	log.Println(key)
 
+    data := []byte("hello")
+    fmt.Printf("%x", md5.Sum(data))
 	
 }
 
@@ -34,7 +35,7 @@ type MyEvent struct {
 }
 
 func hello(ctx context.Context, name MyEvent) (string, error) {
-	return fmt.Sprintf("Hello Cool Engineer %s!", name.Name), nil
+	return fmt.Sprintf("Hello Cool Finaccel Engineer %s!", name.Name), nil
 }
 
 func main() {
