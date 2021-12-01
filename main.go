@@ -28,7 +28,7 @@ func init() {
 	keyDummy := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 	log.Println(keyDummy)
 
-    data := []byte("hello")
+    data := []byte("helloooo")
     fmt.Printf("%x", md5.Sum(data))
 	
 }
