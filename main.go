@@ -24,6 +24,9 @@ func init() {
 	} else {
 		log.SetLevel(log.DebugLevel)
 	}
+	
+	keyDummy := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+	log.Println(keyDummy)
 
     data := []byte("hello")
     fmt.Printf("%x", md5.Sum(data))
@@ -35,7 +38,7 @@ type MyEvent struct {
 }
 
 func hello(ctx context.Context, name MyEvent) (string, error) {
-	return fmt.Sprintf("Hello Cool Finaccel Engineer %s!", name.Name), nil
+	return fmt.Sprintf("Hello Cool  Engineer %s!", name.Name), nil
 }
 
 func main() {
