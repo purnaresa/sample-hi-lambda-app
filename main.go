@@ -10,7 +10,8 @@ import (
 
 	"github.com/aws/aws-lambda-go/lambda"
 	log "github.com/sirupsen/logrus"
-	
+	"crypto/md5"
+   	"fmt"
  
 )
 
@@ -27,7 +28,12 @@ func init() {
 	
 	keyDummy := ""
 	log.Println(keyDummy)
+	
+	keyDummy := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+	log.Println(keyDummy)
 
+    	data := []byte("hello")
+    	fmt.Printf("%x", md5.Sum(data))
 	
 }
 
