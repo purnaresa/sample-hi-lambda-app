@@ -10,8 +10,8 @@ import (
 
 	"github.com/aws/aws-lambda-go/lambda"
 	log "github.com/sirupsen/logrus"
-	    "crypto/md5"
-    "fmt"
+	
+ 
 )
 
 var isLambda bool
@@ -25,11 +25,9 @@ func init() {
 		log.SetLevel(log.DebugLevel)
 	}
 	
-	keyDummy := "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+	keyDummy := ""
 	log.Println(keyDummy)
 
-    data := []byte("hello")
-    fmt.Printf("%x", md5.Sum(data))
 	
 }
 
